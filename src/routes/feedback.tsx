@@ -1,5 +1,4 @@
 import { db } from "@/config/firebase.config";
-import { Interview, UserAnswer } from "@/types";
 import { useAuth } from "@clerk/clerk-react";
 import {
   collection,
@@ -26,6 +25,7 @@ import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { CustomBreadCrumb } from "@/components/ui/custom-bread-crumb";
 import { Headings } from "@/components/ui/headings";
 import { InterviewPin } from "@/components/ui/pin";
+import { Interview, UserAnswer } from "@/types";
 
 export const Feedback = () => {
   const { interviewId } = useParams<{ interviewId: string }>();

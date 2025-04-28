@@ -87,8 +87,9 @@ export const Footer = () => {
           {/* Fourth Column: Address and Social Media */}
           <div>
             <h3 className="font-bold text-lg mb-4">Contact Us</h3>
-            <p className="mb-4">123 AI Street, Tech City, 12345</p>
+            <p className="mb-4">anjalisonavane10@gmail.com<br/>9699260745</p>
             <div className="flex gap-4">
+              
               <SocialLink
                 href="https://facebook.com"
                 icon={<Facebook size={24} />}

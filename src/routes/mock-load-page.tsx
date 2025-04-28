@@ -105,6 +105,12 @@ export const MockLoadPage = () => {
         </div>
       </div>
 
+      <div className="flex items-center justify-center">
+        <Button onClick={() => setIsWebCamEnabled(!isWebCamEnabled)}>
+          {isWebCamEnabled ? "Disable Webcam" : "Enable Webcam"}
+        </Button>
+      </div>
+
   </div>
   );
 }
