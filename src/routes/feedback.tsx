@@ -203,3 +203,4 @@ export const Feedback = () => {
     </div>
   );
 };
+export type { UserAnswer };

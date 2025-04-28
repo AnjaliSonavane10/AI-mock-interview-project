@@ -1,4 +1,4 @@
-import { data, useNavigate } from "react-router-dom";  
+import { useNavigate } from "react-router-dom"; 
 import { 
   Card, 
   CardDescription, 
@@ -9,7 +9,7 @@ import { useState } from "react";
 import { useAuth } from "@clerk/clerk-react"; 
 import { Badge } from "@/components/ui/badge"; 
 import { TooltipButton } from "./tooltip-button";
-import { Eye, Newspaper, Pencil, Sparkle, Sparkles } from "lucide-react";
+import { Eye, Newspaper, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils"; // If you have a utility function
 
 interface Interview {
@@ -27,8 +27,8 @@ interface InterviewPinProps {
 
 export const InterviewPin = ({ interview, onMockPage = false }: InterviewPinProps) => {  
   const navigate = useNavigate();  
-  const [loading, setLoading] = useState(false);  
-  const { userId } = useAuth();  
+  const [] = useState(false);  
+  useAuth();  
 
   const interviewDate = interview.createdAt?.toDate 
     ? interview.createdAt.toDate() 

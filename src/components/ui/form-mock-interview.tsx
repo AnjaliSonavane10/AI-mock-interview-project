@@ -158,11 +158,14 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
 
   useEffect(() => {
     if (initialData) {
-      Object.keys(initialData).forEach((key) => {
-        form.setValue(key as keyof FormData, initialData[key]);
-      });
+      const { position, description, experience, techStack } = initialData;
+      form.setValue("position", position || "");
+      form.setValue("description", description || "");
+      form.setValue("experience", experience || 0);
+      form.setValue("techStack", techStack || "");
     }
   }, [initialData, form]);
+  
 
   return (
     <div className="w-full flex-col space-y-4">
